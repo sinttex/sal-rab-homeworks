@@ -26,10 +26,10 @@ function renderCartItem({id, title, count, price}) {
     // 6. Создайте переменную sum и присвойте ей значение произведения количества и цены
     // 7. Присвойте переменной itemCountText результат склеивания itemCountText и sum
     // 8. Присвойте переменной itemCountText результат склеивания itemCountText и ` ₽`
-    let sum = 0;
-    sum = product.count * product.price;
-    let itemCountText = '';
-    itemCountText = product.count + ' x ' + product.price + ' ₽ = ' + sum + ' ₽';
+    //let sum = 0;
+    //sum = product.count * product.price;
+    //let itemCountText = '';
+    let itemCountText = `${product.count} × ${product.price} ₽ = ${product.count * product.price} ₽`;
     // Конец решения задания №3.1.
 
     return `<div class="cart-item"><div>${product.title}</div><div>${itemCountText}</div></div>`;
