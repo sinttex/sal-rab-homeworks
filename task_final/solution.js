@@ -33,14 +33,14 @@
 //    }
 // }
 
-function sendRequest(name, phone, {street, house, entrance, floor, flat}, [{id, title, count, price}], sum) {
-    let address = {
-        street: street,
-        house: house,
-        entrance: entrance,
-        floor: floor,
-        flat: flat,
-    }
+function sendRequest(name, phone, address, goods, sum) {
+    //let address = {
+    //    street: street,
+    //    house: house,
+    //    entrance: entrance,
+    //    floor: floor,
+    //    flat: flat,
+    //}
     //let goods = {
     //    id: id,
     //    title: title,
@@ -58,15 +58,14 @@ function sendRequest(name, phone, {street, house, entrance, floor, flat}, [{id, 
             address: `ул. ${address.street}, дом ${address.house}, ${address.entrance} подъезд, ${address.floor} этаж, кв ${address.flat}`,
             sum: sum, 
         },
-        goods: [//{
-           // title: title,
-           // count: count,
-       // }
-        ]
+        goods: [{
+            title: title,
+            count: count,
+        }]
         
     };
-    //for (let i = 0; i > data.goods.lenght; data.goods.lenght++ ){
-    data.goods.push({title: title, count: count})
+    //for (let i = 0; i <= data.goods.lenght; i++ ){
+    data.goods.push({title: goods.title, count: goods.count})
     //}
     
     //data.goods.forEach(element => {
