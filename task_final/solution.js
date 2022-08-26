@@ -59,8 +59,8 @@ function sendRequest(name, phone, address, goods, sum) {
             sum: sum, 
         },
         goods: [{
-            title: title,
-            count: count,
+            title: goods.title,
+            count: goods.count,
         }]
         
     };
@@ -74,7 +74,7 @@ function sendRequest(name, phone, address, goods, sum) {
     
            
     const convertDataToObj = {
-        data
+        data,
     }; 
    
     return JSON.stringify(convertDataToObj);
