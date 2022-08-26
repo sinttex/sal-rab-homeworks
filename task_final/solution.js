@@ -58,19 +58,20 @@ function sendRequest(name, phone, address, goods, sum) {
             address: `ул. ${address.street}, дом ${address.house}, ${address.entrance} подъезд, ${address.floor} этаж, кв ${address.flat}`,
             sum: sum, 
         },
-        goods: [{
-            title: goods.title,
-            count: goods.count,
-        }]
+        goods: [//{
+            //title: goods.title,
+            //count: goods.count,
+        //}
+    ]
         
     };
     //for (let i = 0; i <= data.goods.lenght; i++ ){
-        data.goods.push({title: goods.title, count: goods.count})
+      //  data.goods.push({title: goods.title, count: goods.count})
     //    }
     
-    //data.goods.forEach(element => {
-    //   return {title: element.title, count: element.count};
-    //}
+    goods.forEach((element) => {
+        data.goods.push({title: element.title, count: element.count});
+    })
     
            
     const convertDataToObj = {
