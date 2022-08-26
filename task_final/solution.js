@@ -34,24 +34,7 @@
 // }
 
 function sendRequest(name, phone, address, goods, sum) {
-    //let address = {
-    //    street: street,
-    //    house: house,
-    //    entrance: entrance,
-    //    floor: floor,
-    //    flat: flat,
-    //}
-    //let goods = {
-    //    id: id,
-    //    title: title,
-    //    count: count,
-    //    price: price,
-    //}
-    //let nameTel = '';
-    //nameTel = `${name} ${phone}`;
-    //let complAddress = '';
-    //complAddress = `ул. ${address.street}, дом ${address.house}, ${address.entrance} подъезд, ${address.floor} этаж, кв ${address.flat}`;
-    
+        
     let data = {
         client: `${name} ${phone}`,
         order: {
@@ -63,7 +46,6 @@ function sendRequest(name, phone, address, goods, sum) {
     };
         
     goods.forEach(element => data.goods.push({title: element.title, count: element.count}));
-    
      
     const convertDataToObj = {
         data,
