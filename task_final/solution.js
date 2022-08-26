@@ -64,9 +64,9 @@ function sendRequest(name, phone, address, goods, sum) {
         }]
         
     };
-    //for (let i = 0; i <= data.goods.lenght; i++ ){
-    data.goods.push({title: goods.title, count: goods.count})
-    //}
+    for (let i = 0; i <= data.goods.lenght; i++ ){
+        data.goods.push({title: goods.title, count: goods.count})
+        }
     
     //data.goods.forEach(element => {
     //   return {title: element.title, count: element.count};
