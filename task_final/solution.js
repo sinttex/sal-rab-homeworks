@@ -69,9 +69,8 @@ function sendRequest(name, phone, address, goods, sum) {
       //  data.goods.push({title: goods.title, count: goods.count})
     //    }
     
-    goods.forEach(element => {
-        data.goods.push({title: element.title, count: element.count});
-    })
+    goods.forEach(element => data.goods.push({title: element.title, count: element.count}));
+    
     
            
     const convertDataToObj = {
