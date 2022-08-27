@@ -41,11 +41,11 @@ function sendRequest(name, phone, address, goods, sum) {
             address: `ул. ${address.street}, дом ${address.house}, ${address.entrance} подъезд, ${address.floor} этаж, кв ${address.flat}`,
             sum: sum, 
         },
-        goods: []
-            
+        //goods: [] // вариант №1
+        goods: goods.map(element => {return {title: element.title, count: element.count}}), // вариант №2  
     };
         
-    goods.forEach(element => data.goods.push({title: element.title, count: element.count}));
+   // goods.forEach(element => data.goods.push({title: element.title, count: element.count})); // вариант №1
      
     const convertDataToObj = {
         data,
